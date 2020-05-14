@@ -1,0 +1,10 @@
+.header{
+    grid-area: header;
+
+}
+.logo{
+    border-bottom:3px solid #723ae8;
+    color: #acaca9;
+    font-weight: bold;
+    padding: 10px;
+}

@@ -1,0 +1,76 @@
+::-webkit-scrollbar {
+    width: 13px  ;
+
+}
+
+::-webkit-scrollbar-track {
+   background-color: #212121;
+}
+
+::-webkit-scrollbar-button:single-button{
+background-color: cornflowerblue;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #3e3e3e;
+
+}
+
+.tickets{
+    grid-area: tickets;
+    background-color:#323232;
+    padding: 15px;
+    overflow: auto;
+    height: 78vh;
+    scrollbar-face-color: white;
+
+}
+.tickets td div{
+    box-sizing: border-box;
+    border: 1px solid #212121;
+    border-radius: 3px;
+    padding: 2px 5px 2px 5px ;
+    width: 48px;
+    text-align: center;
+}
+.completed{
+    color: green;
+    width: 100px;
+}
+.unassigned{
+    color: gray;
+}
+.assigned{
+
+    color: yellow;
+}
+.avatar{
+    width:  28px;
+    border-radius: 20px;
+}
+.table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    font-size: small;
+}
+
+
+.table thead{
+    color: #717070;
+    font-size: xx-small;
+}
+.table th{
+    padding-bottom: 15px;
+}
+.table td {
+    color: #adadaa;
+    padding: 7px 0 7px 0 ;
+    border-bottom:  1px solid #212121;
+    border-top:  1px solid #212121;
+}
+
+
+
