@@ -1,16 +1,10 @@
 import React from "react";
 import s from './Tickets.module.css'
+import date from "../dateFu";
+import BorderStatus from "../Common/BorderStatus";
 
 const Tickets = (props) => {
-    let date = (a) => {
-        let date = new Date(a);
-        let time = new Date(a);
-        let options = {};
-        options.hour = 'numeric';
-        options.minute = 'numeric';
-        return (date.toLocaleDateString('en-GB') + ' ' + time.toLocaleTimeString('en-GB', options));
 
-    }
 
 
     return (
@@ -19,32 +13,43 @@ const Tickets = (props) => {
             <table className={s.table}>
                 <thead>
                 <tr>
+                    <th></th>
                     <th>OWNER</th>
                     <th>REPORTED</th>
-                    <th>ASSET</th>
+                    <th className={s.asset}>ASSET</th>
                     <th>STATUS</th>
+                    <th> </th>
                 </tr>
                 </thead>
                 <tbody>
-                {props.ticket.map(item => (<tr key={item.id}>
-                    <td><img className={s.avatar}
-                             src={item.owner.avatar}/>
-                    </td>
+                {props.ticket.map(item => (
 
-                    <td>
-                        {date(item.reportedTime)}</td>
-                    <td> {item.asset.name}</td>
-                    <td>  {item.status == 'assigned' ?
-                        <div className={s.assigned}> ASD </div> : item.status == 'completed' ?
-                            <div className={s.completed}> COM </div> :
-                            <div className={s.unassigned}>UNA</div>} </td>
-                        </tr>))}
+                    <tr key={item.ticketId}
+                        onClick={props.onTicketSelect.bind(null, item)}
+                        className={item.ticketId == props.ticketSelected.ticketId? s.active : s.nonactive }>
+                        <th> </th>
+                        <td>
+                            <img className={s.avatar}
+                                 src={item.owner.avatar} />
+                        </td>
+
+                        <td>
+                            {date(item.reportedTime)}</td>
+                        <td> {item.asset.name}</td>
+                        <td>
+                            <BorderStatus  status={item.status}/>
+                        </td>
+                        <th> </th>
+                    </tr>))}
 
 
-                        </tbody>
-                        </table>
+                </tbody>
+            </table>
 
-                        </div>
-                        )
-                        }
-                        export default Tickets;
+        </div>
+    )
+
+
+}
+
+export default Tickets;

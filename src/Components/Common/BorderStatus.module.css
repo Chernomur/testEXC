@@ -1,0 +1,18 @@
+.border{
+    box-sizing: border-box;
+    border: 1px solid #212121;
+    border-radius: 3px;
+    padding: 2px 5px 2px 5px ;
+    width: 48px;
+    text-align: center;
+}
+.completed{
+    color: #119d3f;
+}
+.unassigned{
+    color: #595959;
+}
+.assigned{
+
+    color: #fdc01a;
+}

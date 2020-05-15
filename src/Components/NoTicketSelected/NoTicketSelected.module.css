@@ -1,0 +1,33 @@
+.noTicketSelected {
+
+    grid-area: ticketSelected;
+    background-color: #323232;
+    padding: 15px;
+}
+.outer {
+    text-align: center;
+    height:100% ;
+    width: 100%;
+}
+
+.text{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: x-small;
+}
+.outer:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.noTicketSelected div {
+color: #717070;
+}
+.x{
+    font-size: large;
+    font-weight: bold;
+
+
+}

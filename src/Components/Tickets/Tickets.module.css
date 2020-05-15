@@ -7,9 +7,9 @@
    background-color: #212121;
 }
 
-::-webkit-scrollbar-button:single-button{
-background-color: cornflowerblue;
-}
+/*::-webkit-scrollbar-button:single-button{
+    border-radius: 10px;
+}*/
 
 
 
@@ -21,31 +21,14 @@ background-color: cornflowerblue;
 .tickets{
     grid-area: tickets;
     background-color:#323232;
-    padding: 15px;
+    padding: 15px 0px 15px 0px;
     overflow: auto;
     height: 78vh;
     scrollbar-face-color: white;
 
 }
-.tickets td div{
-    box-sizing: border-box;
-    border: 1px solid #212121;
-    border-radius: 3px;
-    padding: 2px 5px 2px 5px ;
-    width: 48px;
-    text-align: center;
-}
-.completed{
-    color: green;
-    width: 100px;
-}
-.unassigned{
-    color: gray;
-}
-.assigned{
 
-    color: yellow;
-}
+
 .avatar{
     width:  28px;
     border-radius: 20px;
@@ -55,8 +38,20 @@ background-color: cornflowerblue;
     width: 100%;
     text-align: left;
     font-size: small;
+    border-left: 3px solid #323232;
+
+}
+th:first-child{
+    width: 15px;
+}
+th:last-child{
+    width: 15px;
 }
 
+.active{
+    border-left:3px solid #723ae8;
+    background: #414141;
+}
 
 .table thead{
     color: #717070;
@@ -71,6 +66,16 @@ background-color: cornflowerblue;
     border-bottom:  1px solid #212121;
     border-top:  1px solid #212121;
 }
+.asset{
+ text-align: left;
+}
+
+ tbody tr:hover{
+
+    background: #414141;
+}
+
+
 
 
 

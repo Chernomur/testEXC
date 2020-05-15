@@ -1,5 +1,43 @@
-.Detalis{
+.details {
+    border: 2px solid #2c2c2c;
+    color: #acaca9;
+    margin-bottom: 10px;
+}
 
-    background-color: #323232;
-    padding: 15px;
+
+.description{
+    padding: 10px 10px 10px 15px;
+    font-size: small;
+    color: #626262;
+}
+.description div{
+    color: #adadaa;
+}
+
+.reported {
+    padding: 10px 10px 10px 15px;
+    font-size: small;
+    color: #626262;
+
+}
+.reported div {
+
+    color: #adadaa;
+}
+.status{
+    color: #626262;
+    font-size: small;
+    padding: 10px 10px 10px 15px;
+}
+
+
+
+.topic{
+    font-size: small;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    background-color: #2c2c2c;
+    color: #d6d6d6;
 }
