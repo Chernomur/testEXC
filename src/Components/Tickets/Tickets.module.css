@@ -51,6 +51,14 @@ th:last-child{
 .active{
     border-left:3px solid #723ae8;
     background: #414141;
+
+}
+.active .asset{
+    font-weight: bold;
+
+}
+.asset{
+    width: 120px;
 }
 
 .table thead{

@@ -6,7 +6,6 @@ import BorderStatus from "../Common/BorderStatus";
 const Tickets = (props) => {
 
 
-
     return (
         <div className={s.tickets}>
 
@@ -18,7 +17,7 @@ const Tickets = (props) => {
                     <th>REPORTED</th>
                     <th className={s.asset}>ASSET</th>
                     <th>STATUS</th>
-                    <th> </th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -26,20 +25,22 @@ const Tickets = (props) => {
 
                     <tr key={item.ticketId}
                         onClick={props.onTicketSelect.bind(null, item)}
-                        className={item.ticketId == props.ticketSelected.ticketId? s.active : s.nonactive }>
-                        <th> </th>
+                        className={item.ticketId == props.ticketSelected.ticketId ? s.active : s.nonactive}>
+                        <th></th>
                         <td>
                             <img className={s.avatar}
-                                 src={item.owner.avatar} />
+                                 src={item.owner.avatar}/>
                         </td>
 
                         <td>
                             {date(item.reportedTime)}</td>
-                        <td> {item.asset.name}</td>
-                        <td>
-                            <BorderStatus  status={item.status}/>
+                        <td className={s.asset}>
+                            {item.asset.name}
                         </td>
-                        <th> </th>
+                        <td>
+                            <BorderStatus status={item.status}/>
+                        </td>
+                        <th></th>
                     </tr>))}
 
 

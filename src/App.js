@@ -11,6 +11,9 @@ import {connect} from "react-redux";
 import * as axios from "axios";
 
 import NoTicketSelected from "./Components/NoTicketSelected/NoTicketSelected";
+
+
+
 class App extends React.Component {
     componentDidMount() {
         this.props.setIsFatching(true);
@@ -21,21 +24,22 @@ class App extends React.Component {
                 this.props.setTickets(response.data);
             });
     }
+
     render() {
         return (
             <div className='wrapper'>
-                {this.props.isFatching?
-                    <Loader  isFatching={this.props.isFatching}/>
-                    :<Header/>}
-                    <div className='search'>
+                {this.props.isFatching ?
+                    <Loader isFatching={this.props.isFatching}/>
+                    : <Header/>}
+                <div className='search'>
                     <input  type="text" />
                 </div>
                 <Tickets ticket={this.props.tickets} onTicketSelect={this.props.onTicketSelect}
-                         ticketSelected={this.props.ticketSelected? this.props.ticketSelected: " "}
+                         ticketSelected={this.props.ticketSelected ? this.props.ticketSelected : " "}
                 />
                 {this.props.ticketSelected
-                    ?<TicketSelected ticketSelected={this.props.ticketSelected}/>
-                    :<NoTicketSelected/>
+                    ? <TicketSelected ticketSelected={this.props.ticketSelected}/>
+                    : <NoTicketSelected/>
                 }
 
 
@@ -48,7 +52,7 @@ class App extends React.Component {
 let mapStateToProps = (state) => ({
     tickets: state.tickets.ticketsData,
     isFatching: state.tickets.isFatching,
-    ticketSelected:  state.tickets.selectedTicket
+    ticketSelected: state.tickets.selectedTicket
 
 });
 

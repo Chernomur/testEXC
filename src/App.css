@@ -15,8 +15,30 @@ html{
 }
 .search{
   grid-area: search;
+  position: relative;
+
+
 }
+
+
+.search::after{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/VisualEditor_-_Icon_-_Search-big_-_white.svg/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png");
+  background-size: cover;
+  opacity: 0.6;
+  left: 4px;
+  top: 2px;
+}
+
+
+
+
 .search input{
+
+padding-left: 30px;
   box-sizing: border-box;
   width: 380px;
   height: 25px;
