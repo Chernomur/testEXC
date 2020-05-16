@@ -1,16 +1,38 @@
 ::-webkit-scrollbar {
-    width: 13px  ;
+    width: 13px;
 
 }
 
 ::-webkit-scrollbar-track {
-   background-color: #212121;
+    background-color: #212121;
 }
 
-/*::-webkit-scrollbar-button:single-button{
-    border-radius: 10px;
-}*/
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("https://www.acti.com/corpweb/Public/Images/Icon/arrow_up.png");
+    background-size: contain;
+    height: 15px;
+    background-color: #212121;
+}
 
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background-color: #3e3e3e;
+}
+
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("https://pngriver.com/wp-content/uploads/2018/04/Download-Down-Arrow-PNG-Transparent-Image.png");
+    background-size: contain;
+    height: 15px;
+    background-color: #212121;
+
+}
+
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    background-color: #3e3e3e;
+
+}
 
 
 ::-webkit-scrollbar-thumb {
@@ -18,9 +40,9 @@
 
 }
 
-.tickets{
+.tickets {
     grid-area: tickets;
-    background-color:#323232;
+    background-color: #323232;
     padding: 15px 0px 15px 0px;
     overflow: auto;
     height: 78vh;
@@ -29,11 +51,12 @@
 }
 
 
-.avatar{
-    width:  28px;
+.avatar {
+    width: 28px;
     border-radius: 20px;
 }
-.table{
+
+.table {
     border-collapse: collapse;
     width: 100%;
     text-align: left;
@@ -41,45 +64,61 @@
     border-left: 3px solid #323232;
 
 }
-th:first-child{
-    width: 15px;
-}
-th:last-child{
+
+th:first-child {
     width: 15px;
 }
 
-.active{
-    border-left:3px solid #723ae8;
+th:last-child {
+    width: 15px;
+}
+
+.sortActive {
+    border-bottom: 1px solid slateblue;
+
+}
+
+.active {
+    border-left: 3px solid #723ae8;
     background: #414141;
 
 }
-.active .asset{
+
+.active .asset {
     font-weight: bold;
 
 }
-.asset{
+
+.asset {
     width: 120px;
 }
 
-.table thead{
+.sortActiveAs {
+    width: 120px;
+    border-bottom: 1px solid slateblue;
+}
+
+.table thead {
     color: #717070;
     font-size: xx-small;
 }
-.table th{
+
+.table th {
     padding-bottom: 15px;
 }
+
 .table td {
     color: #adadaa;
-    padding: 7px 0 7px 0 ;
-    border-bottom:  1px solid #212121;
-    border-top:  1px solid #212121;
-}
-.asset{
- text-align: left;
+    padding: 7px 0 7px 0;
+    border-bottom: 1px solid #212121;
+    border-top: 1px solid #212121;
 }
 
- tbody tr:hover{
+.asset {
+    text-align: left;
+}
 
+tbody tr:hover {
     background: #414141;
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import s from './Owner.module.css'
 
 const Owner = (props) => {
-    debugger;
+
     return (
         <div className={s.owner}>
             <div className={s.topic}>Owner</div>

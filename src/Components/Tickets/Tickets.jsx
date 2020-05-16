@@ -12,20 +12,38 @@ const Tickets = (props) => {
             <table className={s.table}>
                 <thead>
                 <tr>
-                    <th></th>
-                    <th>OWNER</th>
-                    <th>REPORTED</th>
-                    <th className={s.asset}>ASSET</th>
-                    <th>STATUS</th>
+                    <th onClick={props.onSort.bind(null, 'ticketId')}></th>
+                    <th onClick={props.onSort.bind(null, 'owner.firstName')}
+                        className={props.sortField === 'owner.firstName' ? s.sortActive : null}>OWNER
+                    </th>
+                    <th onClick={props.onSort.bind(null, 'reportedTime')}
+                        className={props.sortField === 'reportedTime' ? s.sortActive : null}
+                    >REPORTED
+                    </th>
+                    <th onClick={props.onSort.bind(null, 'asset.name')}
+                        className={props.sortField === 'asset.name' ? s.sortActiveAs : s.asset}
+                    >ASSET
+                    </th>
+                    <th onClick={props.onSort.bind(null, 'status')}
+                        className={props.sortField === 'status' ? s.sortActive : null}
+                    >STATUS
+                    </th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                {props.ticket.map(item => (
+                {props.ticket.filter((data) => {
+                    if (props.searchValue == null) return data
+                    else if (data.owner.firstName.toLowerCase().includes(props.searchValue.toLowerCase()) ||
+                        data.owner.lastName.toLowerCase().includes(props.searchValue.toLowerCase())
+                    ) {
+                        return data
+                    }
+                }).map(item => (
 
                     <tr key={item.ticketId}
                         onClick={props.onTicketSelect.bind(null, item)}
-                        className={item.ticketId == props.ticketSelected.ticketId ? s.active : s.nonactive}>
+                        className={item.ticketId === props.ticketSelected.ticketId ? s.active : s.nonactive}>
                         <th></th>
                         <td>
                             <img className={s.avatar}
